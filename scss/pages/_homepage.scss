@@ -1,3 +1,26 @@
-.title {
-	text-align: center;
+@use '../abstracts/' as *;
+
+.hero {
+	&__left {
+		max-width: 54.6rem;
+	}
+
+	&__field {
+		width: 44.5rem;
+		height: 4.8rem;
+		border-radius: 2.4rem;
+		background: #fbfcfe;
+		box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+		// border: none;
+		padding: 1.6rem 2.7rem;
+		font-weight: bold;
+		font-size: 15px;
+		line-height: 18px;
+		/* identical to box height */
+
+		color: #36536b;
+
+		mix-blend-mode: normal;
+		opacity: 0.5;
+	}
 }
