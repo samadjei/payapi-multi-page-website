@@ -6,9 +6,10 @@ $breakpoints: (
 	'xlarge': 1440px,
 );
 
-@mixin breakpoint($size) {
-	$breakpoint-value: map-get($breakpoints, $size);
-	@media only screen and (min-width: $breakpoint) {
+@mixin breakpoint($point) {
+	// $breakpoint-value: map-get($breakpoints, $size);
+	$size: map-get($breakpoints, $point);
+	@media only screen and (max-width: $size) {
 		// includes all the content you're writing in your mixin
 		@content;
 	}

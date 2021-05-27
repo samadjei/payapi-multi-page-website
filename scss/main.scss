@@ -30,17 +30,11 @@ html {
 }
 
 body {
-	font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+	font-family: 'DM Serif Display', 'Public Sans', sans-serif;
 	font-size: 1.6rem;
 }
 
-a {
-	text-decoration: none;
-	text-transform: uppercase;
-	&:hover {
-		cursor: pointer;
-	}
-}
+
 
 ul {
 	list-style: none;
@@ -52,13 +46,9 @@ img {
 	height: 100%;
 }
 
-
-
 .container {
-	width: 144rem;
+	width: 111rem;
 	max-width: 100%;
 	margin: 0 auto;
 	overflow: hidden;
-	padding-left: 2rem;
-	padding-right: 2rem;
 }
