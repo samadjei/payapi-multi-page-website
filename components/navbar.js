@@ -26,7 +26,7 @@ const Navbar = () => {
 			<div className="cta">
 				<Link href="/">
 					<Button className="btn hero--btn" buttonStyle="btn--primary" buttonSize="btn--desktop">
-						Get Scootin
+						Schedule a Demo
 					</Button>
 				</Link>
 			</div>

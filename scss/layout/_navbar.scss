@@ -10,7 +10,7 @@
 		align-items: center;
 	}
 	&__logo {
-		margin-right: 5.818rem;
+		margin-right: 6.4rem;
 		&:hover,
 		&:focus {
 			cursor: pointer;
@@ -20,6 +20,8 @@
 	&__links {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		grid-gap: 3.2rem;
+		justify-content: center;
+		align-items: center;
+		grid-gap: 4rem;
 	}
 }

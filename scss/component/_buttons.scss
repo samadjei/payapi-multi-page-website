@@ -1,7 +1,13 @@
+@use '../abstracts' as *;
+
 // Base Button Styling
 .btn {
 	display: inline-block;
+	font-family: 'Public Sans';
 	font-weight: 700;
+	font-size: 1.5rem;
+	letter-spacing: -0.115385px;
+	line-height: 1.8rem;
 	border-radius: 2.8rem;
 	outline: none;
 	border: none;
@@ -11,21 +17,16 @@
 	}
 }
 
-// btn placeholder
-%btn {
-	padding: 2rem 4rem;
-}
-
 // BUTTON STYLES
 
 // First Button
 .btn--primary {
-	// &:hover,
-	// &:focus {
-
-	// }
-	// if you want selector to share something, this is where @extends comes into play
-	// @extend %btn;
+	background: $dark-pink;
+	color: $link-water-white;
+	&:hover,
+	&:focus {
+		background: $charm-pink;
+	}
 }
 
 // Second Button
@@ -51,8 +52,7 @@
 // Desktop Button
 .btn--desktop {
 	width: 17.1rem;
-	height: 5.6rem;
+	height: 4.8rem;
 	margin: 0 auto;
-	// padding: 1.4rem 4.1rem;
-	font-size: 1.6rem;
+	
 }
