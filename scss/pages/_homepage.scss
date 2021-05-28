@@ -67,12 +67,23 @@
 .work {
 	padding: 10rem 0;
 	background: $mirage-blue;
+	position: relative;
+	overflow: hidden;
+	z-index: 0;
 	&__inner {
+		position: relative;
 		@include flex-center;
 		justify-content: space-between;
 	}
-	// &-overlay {
-	// }
+	&-overlay {
+		position: absolute;
+		background-image: url('../../public/assets/shared/desktop/bg-pattern-circle.svg');
+		height: 78rem;
+		width: 78rem;
+		top: -35rem;
+		left: 1rem;
+		z-index: -9;
+	}
 	&__left {
 		max-width: 44.5rem;
 	}

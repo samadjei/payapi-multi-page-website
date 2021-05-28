@@ -9,7 +9,6 @@
 	letter-spacing: -0.115385px;
 	line-height: 1.8rem;
 	border-radius: 2.8rem;
-	outline: none;
 	border: none;
 	&:hover,
 	&:focus {
@@ -32,7 +31,7 @@
 // Second Button
 
 .btn--secondary {
-	background: transparent;
+	background: $mirage-blue;
 	color: $link-water-white;
 	border: 1px solid $link-water-white;
 	&:hover,
@@ -41,15 +40,6 @@
 		color: $mirage-blue;
 	}
 }
-
-// Third Button
-.btn--tertiary {
-	// &:hover,
-	// &:focus {
-
-	// }
-}
-
 // Button Sizes
 
 // Desktop Button

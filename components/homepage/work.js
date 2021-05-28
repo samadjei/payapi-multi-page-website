@@ -12,7 +12,7 @@ const Work = () => {
 					<p className="work--description">Today, millions of people around the world have successfully connected their accounts to apps they love using our API. We provide developers with the tools they need to create easy and accessible experiences for their users.</p>
 					<div className="cta">
 						<Link href="/about">
-							<Button className="btn hero--btn" buttonStyle="btn--secondary" buttonSize="btn--desktop">
+							<Button className="btn work--btn" buttonStyle="btn--secondary" buttonSize="btn--desktop">
 								About Us
 							</Button>
 						</Link>
