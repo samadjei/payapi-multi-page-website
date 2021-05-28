@@ -1,26 +1,98 @@
 @use '../abstracts/' as *;
 
+.main {
+	position: relative;
+	&::after {
+		content: '';
+		position: absolute;
+		background-image: url('../../public/assets/shared/desktop/bg-pattern-circle.svg');
+		height: 78rem;
+		width: 78rem;
+		top: -30rem;
+		right: 10rem;
+		z-index: -1;
+	}
+}
+
 .hero {
 	&__left {
 		max-width: 54.6rem;
 	}
 
-	&__field {
-		width: 44.5rem;
+	&__inner {
+		@include flex-center;
+		justify-content: space-between;
+	}
+
+	&__form {
+		position: relative;
+		width: 80%;
 		height: 4.8rem;
+		max-width: 44.5rem;
 		border-radius: 2.4rem;
-		background: #fbfcfe;
-		box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
-		// border: none;
+
+		&--input {
+			font-weight: 700;
+			font-size: 15px;
+			line-height: 18px;
+
+			&::placeholder {
+				opacity: 0.5;
+				color: $san-juan-blue;
+			}
+		}
+	}
+
+	&__field {
+		width: 100%;
+		background: #ffffff;
 		padding: 1.6rem 2.7rem;
-		font-weight: bold;
-		font-size: 15px;
-		line-height: 18px;
-		/* identical to box height */
+		border: none;
+		border-radius: 2.4rem;
+		box-shadow: 1px 3px 10px 1px rgba(55, 84, 109, 0.25);
+		margin-left: 0.75rem;
+	}
 
-		color: #36536b;
+	&--question {
+		padding-top: 1.6rem;
+		padding-left: 3rem;
+	}
 
-		mix-blend-mode: normal;
-		opacity: 0.5;
+	&--contact {
+		color: $light-san-juan-blue;
+	}
+}
+
+// Work With
+.work {
+	padding: 10rem 0;
+	background: $mirage-blue;
+	&__inner {
+		@include flex-center;
+		justify-content: space-between;
+	}
+	// &-overlay {
+	// }
+	&__left {
+		max-width: 44.5rem;
+	}
+
+	&--title {
+		color: $link-water-white;
+	}
+	&--description {
+		padding-top: 2.4rem;
+		padding-bottom: 3.2rem;
+		color: $link-water-white;
+		opacity: 0.7;
+	}
+
+	&__right {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		justify-content: center;
+		align-items: center;
+		grid-row-gap: 4.7rem;
+		grid-column-gap: 6.2rem;
 	}
 }
