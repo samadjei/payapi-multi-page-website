@@ -1,0 +1,60 @@
+@use '../abstracts' as *;
+
+.footer {
+	background: $mirage-blue;
+	padding: 3.1rem 0;
+	position: relative;
+	overflow: hidden;
+	z-index: 0;
+
+	&-overlay {
+		position: absolute;
+		background-image: url('../../public/assets/shared/desktop/bg-pattern-circle.svg');
+		height: 78rem;
+		width: 78rem;
+		top: -10rem;
+		right: -10rem;
+		z-index: -9;
+	}
+
+	&__inner {
+		@include flex-center;
+		justify-content: space-between;
+	}
+	&__logo {
+		margin-right: 6.4rem;
+		&:hover,
+		&:focus {
+			cursor: pointer;
+		}
+	}
+	&__left {
+		display: flex;
+		align-items: center;
+	}
+	&__links {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		justify-content: center;
+		align-items: center;
+		grid-gap: 4rem;
+	}
+	&--items {
+		color: #fff;
+	}
+
+	// Footer Right
+	&__socials {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		justify-content: center;
+		align-items: center;
+		grid-gap: 2.4rem;
+	}
+
+	&--socials:hover,
+	&--socials:focus {
+		fill: red;
+		cursor: pointer;
+	}
+}
