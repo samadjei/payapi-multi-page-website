@@ -1,9 +1,6 @@
-// Render Prop
+import { Formik, Form, Field } from 'formik';
 
-import { Formik, Form, Field, ErrorMessage } from 'formik';
-import * as Yup from 'yup';
-
-const Basic = () => (
+const Email = () => (
 	<div>
 		<Formik
 			initialValues={{ email: '' }}
@@ -41,4 +38,4 @@ const Basic = () => (
 	</div>
 );
 
-export default Basic;
+export default Email;
