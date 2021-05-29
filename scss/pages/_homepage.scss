@@ -35,7 +35,10 @@
 			font-weight: 700;
 			font-size: 15px;
 			line-height: 18px;
-
+			&:hover,
+			&:focus {
+				cursor: pointer;
+			}
 			&::placeholder {
 				opacity: 0.5;
 				color: $san-juan-blue;

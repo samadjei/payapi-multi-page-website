@@ -40,6 +40,17 @@
 		color: $mirage-blue;
 	}
 }
+
+.btn--tertiary {
+	background: transparent;
+	color: $mirage-blue;
+	border: 1px solid $mirage-blue;
+	&:hover,
+	&:focus {
+		background: $mirage-blue;
+		color: $link-water-white;
+	}
+}
 // Button Sizes
 
 // Desktop Button

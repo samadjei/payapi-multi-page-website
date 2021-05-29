@@ -1,4 +1,4 @@
-// @use 'abstracts/breakpoints';
+@use 'abstracts/breakpoints';
 @use 'abstracts/mixins' as *;
 @use 'abstracts/colours' as *;
 
@@ -12,6 +12,7 @@
 @use 'layout/navbar' as *;
 
 @use 'pages/homepage' as *;
+@use 'pages/pricing' as *;
 
 // @import 'component/button.scss';
 

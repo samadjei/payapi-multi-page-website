@@ -1,0 +1,42 @@
+@use '../abstracts/' as *;
+
+.plans {
+	&__inner {
+		padding-top: 7.2rem;
+		padding-bottom: 9.6rem;
+		@include flex-center;
+	}
+	&__items {
+		max-width: 35rem;
+		text-align: left;
+		margin-right: auto;
+	}
+	&--title {
+		color: $dark-pink;
+	}
+	&--description {
+		padding-top: 1.6rem;
+		padding-bottom: 0.8rem;
+	}
+	&--selected {
+		color: $san-juan-blue;
+		padding-left: 2.4rem;
+	}
+
+	&__ticked {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+
+	&__options li:not(.plans--selected) {
+		padding-left: 3.8rem;
+	}
+
+	&__hr {
+		background: $mirage-blue;
+		opacity: 0.25;
+		height: 0.1px;
+		margin: 2.4rem 0;
+	}
+}
