@@ -29,7 +29,7 @@
 		text-align: left;
 		@include breakpoint(medium) {
 			text-align: center;
-			padding-bottom: 10rem;
+			padding-bottom: 7.9rem;
 			max-width: 57.3rem;
 		}
 	}
@@ -37,6 +37,9 @@
 	&__right {
 		@include breakpoint(medium) {
 			transform: translateX(5rem);
+		}
+		@include breakpoint(medium) {
+			transform: translateX(3rem);
 		}
 	}
 
@@ -98,8 +101,8 @@
 		@include breakpoint(medium) {
 			padding-left: 0rem;
 		}
-		@include breakpoint(phone) {
-			padding-top: 8rem;
+		@include breakpoint(medium) {
+			padding-top: 10rem;
 		}
 	}
 
@@ -141,6 +144,10 @@
 		@include breakpoint(medium) {
 			top: -52rem;
 			left: -2rem;
+		}
+		@include breakpoint(xsmall) {
+			top: -57rem;
+			left: -18rem;
 		}
 	}
 	&__left {
@@ -192,11 +199,6 @@
 		padding-top: 5rem;
 		padding-bottom: 10rem;
 	}
-	// @include breakpoint(small) {
-	// 	// padding-top: 8rem;
-	// 	padding-bottom: 10rem;
-	// 	display: none;
-	// }
 
 	&::after {
 		content: '';
@@ -232,6 +234,9 @@
 		@include breakpoint(medium) {
 			padding-bottom: 10rem;
 		}
+		@include breakpoint(xsmall) {
+			padding-bottom: 8rem;
+		}
 	}
 
 	&__image {
@@ -255,6 +260,9 @@
 			@include breakpoint(medium) {
 				transform: translateX(5rem);
 			}
+			@include breakpoint(medium) {
+				transform: translateX(0rem);
+			}
 		}
 	}
 }
@@ -262,6 +270,9 @@
 // Offers
 .offers {
 	padding-bottom: 9.6rem;
+	@include breakpoint(medium) {
+		padding-bottom: 8rem;
+	}
 	&__inner {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -271,6 +282,10 @@
 		grid-gap: 3rem;
 		@include breakpoint(medium) {
 			grid-gap: 0.5rem;
+		}
+		@include breakpoint(medium) {
+			grid-template-columns: repeat(1, 1fr);
+			grid-gap: 4.8rem;
 		}
 	}
 

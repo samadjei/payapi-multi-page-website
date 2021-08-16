@@ -20,13 +20,13 @@ class Nav extends Component {
 					<i className={this.state.clicked ? 'fas fa-times active' : 'fas fa-bars'}></i>
 				</div>
 				<ul className={this.state.clicked ? 'navbar__links active' : 'navbar__links'}>
-					<Link href="/about">
+					<Link href="/pricing">
 						<a className="navbar--items">Pricing</a>
 					</Link>
-					<Link href="/location">
+					<Link href="/about">
 						<a className="navbar--items">About</a>
 					</Link>
-					<Link href="/careers">
+					<Link href="/contact">
 						<a className="navbar--items">Contact</a>
 					</Link>
 					<Link href="/">

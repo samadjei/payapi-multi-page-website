@@ -22,7 +22,7 @@ h1 {
 	@include breakpoint(xsmall) {
 		font-size: 3.2rem;
 		line-height: 3.6rem;
-		letter-spacing: -0.246154px;
+		letter-spacing: -0.25;
 	}
 }
 
@@ -36,6 +36,12 @@ h2 {
 	font-size: 4.8rem;
 	line-height: 5.6rem;
 	letter-spacing: -0.369231px;
+	@include breakpoint(xsmall) {
+		font-size: 3.6rem;
+		line-height: 3.6rem;
+		letter-spacing: -0.28px;
+		padding-top: 3rem;
+	}
 }
 
 h3 {
