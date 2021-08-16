@@ -6,7 +6,7 @@ const Hero = () => {
 		<section className="hero">
 			<div className="hero__inner container">
 				<div className="hero__left">
-					<h1>Start building with our APIs for absolutely free.</h1>
+					<h1 className="hero--title">Start building with our APIs for absolutely free.</h1>
 					<Basic />
 					<p className="hero--question">
 						Have any questions? <span className="hero--contact">Contact Us</span>

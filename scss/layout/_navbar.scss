@@ -1,27 +1,91 @@
 @use '../abstracts' as *;
 
 .navbar {
-	@include flex-center;
+	position: sticky;
+	display: flex;
+	align-items: center;
 	justify-content: space-between;
 	height: 9.6rem;
+	width: 111rem;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0 2rem;
+	@include breakpoint(small) {
+		justify-content: center;
+	}
+	z-index: 9;
 
 	&__left {
 		display: flex;
 		align-items: center;
+		@include breakpoint(small) {
+			justify-content: center;
+		}
 	}
 	&__logo {
-		margin-right: 6.4rem;
-		&:hover,
-		&:focus {
-			cursor: pointer;
+		margin-right: 6rem;
+		cursor: pointer;
+		@include breakpoint(small) {
+			margin-right: auto;
+		}
+	}
+
+	&--items {
+		@include breakpoint(small) {
+			color: $link-water-white;
+			font-weight: bold;
+			font-size: 2rem;
+			line-height: 2.3rem;
+			text-align: center;
+			opacity: 0.7;
 		}
 	}
 
 	&__links {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		justify-content: center;
+		display: flex;
 		align-items: center;
-		grid-gap: 4rem;
+		width: 100%;
+		gap: 3.2rem;
+		@include breakpoint(small) {
+			display: flex;
+			text-align: center;
+			align-items: center;
+			flex-direction: column;
+			padding-top: 13.9rem;
+			position: absolute;
+			top: 0;
+			width: 70%;
+			height: 100vh;
+			right: -100%;
+			&.active {
+				background: rgb(28, 39, 49);
+				box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+				right: 0;
+				transition: all 0.5s ease;
+			}
+		}
 	}
+}
+
+// Hamburger
+.fas {
+	display: none;
+	font-size: 2.8rem;
+	color: $san-juan-blue;
+	position: absolute;
+	top: 40%;
+	right: 5rem;
+	cursor: pointer;
+	z-index: 999;
+	@include breakpoint(small) {
+		display: block;
+	}
+
+	&.active {
+		color: $link-water-white;
+	}
+}
+
+.fas.fa-times .navbar__links__links.active {
+	color: pink;
 }

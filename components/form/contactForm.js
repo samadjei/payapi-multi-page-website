@@ -53,9 +53,17 @@ const ContactForm = () => {
 					}, 3000);
 				}}
 			>
-				{(props) => (
+				{(prop, isSubmitting) => (
 					<Form>
-						<CustomTextInput label="Name" name="name" type="text" placeholder="Name" />
+						<CustomTextInput name="name" type="text" placeholder="Name" />
+						<CustomTextInput name="email" type="email" placeholder="Email Address" />
+						<CustomTextInput name="company" type="text" placeholder="Company Name" />
+						<CustomTextInput name="Title" type="text" placeholder="Title" />
+						<CustomTextInput name="Text" type="textarea" placeholder="Message" />
+						<CustomCheckbox name="acceptedTerms">Stay up-to-date with company announcements and updates to our API</CustomCheckbox>
+						<button className="hero__cta hero--primary cta--positioning" type="submit" disabled={isSubmitting}>
+							Schedule a Demo
+						</button>
 					</Form>
 				)}
 			</Formik>

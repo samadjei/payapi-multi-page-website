@@ -6,22 +6,51 @@
 		content: '';
 		position: absolute;
 		background-image: url('../../public/assets/shared/desktop/bg-pattern-circle.svg');
+		background-repeat: no-repeat;
 		height: 78rem;
 		width: 78rem;
 		top: -30rem;
 		right: 10rem;
 		z-index: -1;
+		@include breakpoint(medium) {
+			top: -50rem;
+			right: 0rem;
+		}
+		@include breakpoint(xsmall) {
+			top: -55rem;
+			right: -20rem;
+		}
 	}
 }
 
 .hero {
 	&__left {
 		max-width: 54.6rem;
+		text-align: left;
+		@include breakpoint(medium) {
+			text-align: center;
+			padding-bottom: 10rem;
+			max-width: 57.3rem;
+		}
+	}
+
+	&__right {
+		@include breakpoint(medium) {
+			transform: translateX(5rem);
+		}
+	}
+
+	&--title {
+		margin-top: 0;
 	}
 
 	&__inner {
 		@include flex-center;
 		justify-content: space-between;
+		@include breakpoint(medium) {
+			flex-direction: column-reverse;
+			justify-content: center;
+		}
 	}
 
 	&__form {
@@ -30,6 +59,10 @@
 		height: 4.8rem;
 		max-width: 44.5rem;
 		border-radius: 2.4rem;
+		@include breakpoint(medium) {
+			margin: 0 auto;
+			text-align: center;
+		}
 
 		&--input {
 			font-weight: 700;
@@ -54,14 +87,24 @@
 		border-radius: 2.4rem;
 		box-shadow: 1px 3px 10px 1px rgba(55, 84, 109, 0.25);
 		margin-left: 0.75rem;
+		@include breakpoint(medium) {
+			margin-left: 0;
+		}
 	}
 
 	&--question {
 		padding-top: 1.6rem;
 		padding-left: 3rem;
+		@include breakpoint(medium) {
+			padding-left: 0rem;
+		}
+		@include breakpoint(phone) {
+			padding-top: 8rem;
+		}
 	}
 
 	&--contact {
+		font-weight: 700;
 		color: $light-san-juan-blue;
 	}
 }
@@ -69,6 +112,12 @@
 // Work With
 .work {
 	padding: 10rem 0;
+	@include breakpoint(medium) {
+		padding: 8.8rem 0;
+	}
+	@include breakpoint(xsmall) {
+		padding: 7.9rem 0;
+	}
 	background: $mirage-blue;
 	position: relative;
 	overflow: hidden;
@@ -77,6 +126,9 @@
 		position: relative;
 		@include flex-center;
 		justify-content: space-between;
+		@include breakpoint(medium) {
+			flex-direction: column-reverse;
+		}
 	}
 	&-overlay {
 		position: absolute;
@@ -86,19 +138,35 @@
 		top: -35rem;
 		left: 1rem;
 		z-index: -9;
+		@include breakpoint(medium) {
+			top: -52rem;
+			left: -2rem;
+		}
 	}
 	&__left {
 		max-width: 44.5rem;
+		@include breakpoint(medium) {
+			padding-top: 6.4rem;
+			text-align: center;
+		}
 	}
 
 	&--title {
 		color: $link-water-white;
+		@include breakpoint(medium) {
+			font-size: 3.2rem;
+			line-height: 3.6rem;
+			letter-spacing: -0.246154px;
+		}
 	}
 	&--description {
 		padding-top: 2.4rem;
 		padding-bottom: 3.2rem;
 		color: $link-water-white;
 		opacity: 0.7;
+		@include breakpoint(phone) {
+			padding-bottom: 6rem;
+		}
 	}
 
 	&__right {
@@ -108,6 +176,9 @@
 		align-items: center;
 		grid-row-gap: 4.7rem;
 		grid-column-gap: 6.2rem;
+		@include breakpoint(small) {
+			grid-template-columns: repeat(2, 1fr);
+		}
 	}
 }
 
@@ -117,6 +188,15 @@
 	padding-bottom: 15rem;
 	position: relative;
 	overflow: hidden;
+	@include breakpoint(medium) {
+		padding-top: 5rem;
+		padding-bottom: 10rem;
+	}
+	// @include breakpoint(small) {
+	// 	// padding-top: 8rem;
+	// 	padding-bottom: 10rem;
+	// 	display: none;
+	// }
 
 	&::after {
 		content: '';
@@ -124,21 +204,38 @@
 		background-image: url('../../public/assets/shared/desktop/bg-pattern-circle.svg');
 		height: 78rem;
 		width: 78rem;
-		top: 50rem;
+		top: 40rem;
 		right: -30rem;
 		z-index: -1;
+		@include breakpoint(medium) {
+			display: none;
+		}
 	}
 
 	&__inner {
 		@include flex-center;
 		justify-content: space-between;
+		@include breakpoint(medium) {
+			flex-direction: column;
+			text-align: center;
+		}
 	}
 	&__content {
 		@include content-width;
+		@include breakpoint(medium) {
+			max-width: 57.3rem;
+			margin-top: -4.8rem;
+		}
 	}
 
-	&__left-top {
-		margin-left: 0rem;
+	&__top {
+		@include breakpoint(medium) {
+			padding-bottom: 10rem;
+		}
+	}
+
+	&__image {
+		margin: auto;
 	}
 
 	&--description {
@@ -146,15 +243,20 @@
 	}
 
 	&__bottom {
-		// @include flex-center;
 		display: flex;
 		align-items: center;
 		justify-content: space-evenly;
+		@include breakpoint(medium) {
+			flex-direction: column-reverse;
+			text-align: center;
+		}
+		&-images {
+			transform: translateX(10rem);
+			@include breakpoint(medium) {
+				transform: translateX(5rem);
+			}
+		}
 	}
-}
-
-.images {
-	transform: translateX(10rem);
 }
 
 // Offers
@@ -162,11 +264,14 @@
 	padding-bottom: 9.6rem;
 	&__inner {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-		grid-gap: 3rem;
+		grid-template-columns: repeat(3, 1fr);
+		align-items: flex-start;
 		justify-content: center;
-		align-items: center;
 		text-align: center;
+		grid-gap: 3rem;
+		@include breakpoint(medium) {
+			grid-gap: 0.5rem;
+		}
 	}
 
 	&--title {
@@ -181,13 +286,32 @@
 		padding-bottom: 9.6rem;
 		@include flex-center;
 		justify-content: space-between;
+		@include breakpoint(medium) {
+			flex-direction: column;
+			text-align: center;
+		}
 	}
 	&__left {
 		width: 100%;
+		// @include breakpoint(medium) {
+		// 	width: 44.5rem;
+		// }
+	}
+
+	&--title {
+		font-size: 48px;
+		line-height: 56px;
+		/* identical to box height, or 117% */
+
+		letter-spacing: -0.369231px;
 	}
 
 	&__right {
 		width: 100%;
 		margin-left: 15rem;
+		@include breakpoint(medium) {
+			padding-top: 4rem;
+			margin-left: 0;
+		}
 	}
 }

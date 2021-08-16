@@ -14,9 +14,19 @@ h1 {
 	font-weight: 400;
 	line-height: 7.2rem;
 	letter-spacing: -0.55px;
+	@include breakpoint(medium) {
+		font-size: 4.8rem;
+		line-height: 5.6rem;
+		letter-spacing: -0.369231px;
+	}
+	@include breakpoint(xsmall) {
+		font-size: 3.2rem;
+		line-height: 3.6rem;
+		letter-spacing: -0.246154px;
+	}
 }
 
-h1.small {
+h1.tablet {
 	font-size: 5.6rem;
 	line-height: 5.6rem;
 	letter-spacing: -0.430769px;
@@ -32,14 +42,14 @@ h3 {
 	font-size: 3.2rem;
 	line-height: 4rem;
 	letter-spacing: -0.246154px;
-	// @include breakpoint(small) {
-	// 	font-size: 1.8rem;
-	// 	line-height: 2.5rem;
-	// 	letter-spacing: -0.138462px;
-	// }
+	@include breakpoint(medium) {
+		font-size: 1.8rem;
+		line-height: 2.5rem;
+		letter-spacing: -0.138462px;
+	}
 }
 
-h3.small {
+h3.tablet {
 	font-family: 'Public Sans';
 	font-weight: 700;
 	font-size: 1.8rem;
