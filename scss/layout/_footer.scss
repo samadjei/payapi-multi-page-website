@@ -15,22 +15,35 @@
 		top: -10rem;
 		right: -10rem;
 		z-index: -9;
+		overflow: hidden;
+		@include breakpoint(xsmall) {
+			top: 15rem;
+			right: -15rem;
+		}
 	}
 
 	&__inner {
 		@include flex-center;
 		justify-content: space-between;
+		@include breakpoint(xsmall) {
+			flex-direction: column;
+		}
 	}
 	&__logo {
 		margin-right: 6.4rem;
-		&:hover,
-		&:focus {
-			cursor: pointer;
+		cursor: pointer;
+
+		@include breakpoint(xsmall) {
+			margin: auto;
 		}
 	}
 	&__left {
 		display: flex;
 		align-items: center;
+		@include breakpoint(xsmall) {
+			flex-direction: column;
+			justify-content: center;
+		}
 	}
 	&__links {
 		display: grid;
@@ -38,6 +51,10 @@
 		justify-content: center;
 		align-items: center;
 		grid-gap: 4rem;
+		@include breakpoint(xsmall) {
+			grid-template-columns: 1fr;
+			padding: 4rem 0;
+		}
 	}
 	&--items {
 		color: #fff;

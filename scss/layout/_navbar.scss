@@ -47,7 +47,7 @@
 		width: 100%;
 		gap: 3.2rem;
 		@include breakpoint(small) {
-			display: flex;
+			display: none;
 			text-align: center;
 			align-items: center;
 			flex-direction: column;
@@ -57,11 +57,12 @@
 			width: 70%;
 			height: 100vh;
 			right: -100%;
+			transition: all 0.5s ease;
 			&.active {
+				display: flex;
 				background: rgb(28, 39, 49);
 				box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
 				right: 0;
-				transition: all 0.5s ease;
 			}
 		}
 	}
@@ -84,8 +85,4 @@
 	&.active {
 		color: $link-water-white;
 	}
-}
-
-.fas.fa-times .navbar__links__links.active {
-	color: pink;
 }

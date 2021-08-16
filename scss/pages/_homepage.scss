@@ -24,6 +24,7 @@
 }
 
 .hero {
+
 	&__left {
 		max-width: 54.6rem;
 		text-align: left;
@@ -270,7 +271,7 @@
 // Offers
 .offers {
 	padding-bottom: 9.6rem;
-	@include breakpoint(medium) {
+	@include breakpoint(xsmall) {
 		padding-bottom: 8rem;
 	}
 	&__inner {
