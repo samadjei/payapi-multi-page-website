@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '../../components/button';
 import Subscription from '../homepage/subscription';
@@ -16,7 +15,7 @@ const Plans = () => {
 					<div className="plans__items">
 						<h3 className="plans--title">Free Plan</h3>
 						<p className="plans--description">Build and test using our core set of products with up to 100 API requests</p>
-						<h3>$0.00</h3>
+						<p className="plans--price">$0.00</p>
 						<hr className="plans__hr" />
 						<ul className="plans__options">
 							<div className="plans__ticked">
@@ -34,11 +33,10 @@ const Plans = () => {
 							<li>Investments</li>
 							<li>Assets</li>
 							<li>Liabilities</li>
-							<li>Request Access</li>
 						</ul>
 						<hr className="plans__hr" />
 						<Link href="/">
-							<Button className="btn hero--btn" buttonStyle="btn--tertiary" buttonSize="btn--desktop">
+							<Button className="btn" buttonStyle="btn--tertiary" buttonSize="btn--desktop">
 								Request Access
 							</Button>
 						</Link>
@@ -47,7 +45,7 @@ const Plans = () => {
 					<div className="plans__items">
 						<h3 className="plans--title">Basic Plan</h3>
 						<p className="plans--description">Launch your project with unlimited requests and no contractual minimums</p>
-						<h3>$249.00</h3>
+						<p className="plans--price">$249.00</p>
 						<hr className="plans__hr" />
 						<ul className="plans__options">
 							<div className="plans__ticked">
@@ -84,7 +82,7 @@ const Plans = () => {
 					<div className="plans__items">
 						<h3 className="plans--title">Premium Plan</h3>
 						<p className="plans--description">Get tailored solutions, volume pricing, and dedicated support for your team</p>
-						<h3>$499.00</h3>
+						<p className="plans--price">$499.00</p>
 						<hr className="plans__hr" />
 
 						<ul className="plans__options">
@@ -125,7 +123,7 @@ const Plans = () => {
 						</Link>
 					</div>
 				</div>
-				<Subscription />
+				<Subscription className='pricing__cta' />
 			</div>
 		</section>
 	);

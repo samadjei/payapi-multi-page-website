@@ -2,6 +2,7 @@
 
 .pricing {
 	position: relative;
+
 	&::after {
 		content: '';
 		position: absolute;
@@ -11,19 +12,46 @@
 		top: -70rem;
 		right: 10rem;
 		z-index: -1;
+		@include breakpoint(xsmall) {
+			right: -45rem;
+		}
 	}
 }
 
 .plans {
+	&__title {
+		@include breakpoint(xsmall) {
+			text-align: center;
+		}
+	}
+
 	&__inner {
 		padding-top: 7.2rem;
 		padding-bottom: 9.6rem;
 		@include flex-center;
+		@include breakpoint(xsmall) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding-top: 4.8rem;
+			padding-bottom: 8rem;
+		}
 	}
 	&__items {
 		max-width: 35rem;
 		text-align: left;
 		margin-right: auto;
+		@include breakpoint(medium) {
+			max-width: 22.3rem;
+		}
+		@include breakpoint(xsmall) {
+			max-width: 32.7rem;
+			text-align: center;
+			margin: auto;
+			&:not(:last-child) {
+				padding-bottom: 4.8rem;
+			}
+		}
 	}
 	&--title {
 		color: $dark-pink;
@@ -32,9 +60,30 @@
 		padding-top: 1.6rem;
 		padding-bottom: 0.8rem;
 	}
+
+	&--title,
+	&--description {
+		@include breakpoint(medium) {
+			text-align: center;
+		}
+	}
+
 	&--selected {
 		color: $san-juan-blue;
 		padding-left: 2.4rem;
+	}
+
+	&__options {
+		@include breakpoint(xsmall) {
+			display: flex;
+			flex-direction: column;
+			width: 13.4rem;
+			margin: auto;
+			text-align: left;
+		}
+		li:not(.plans--selected) {
+			padding-left: 3.8rem;
+		}
 	}
 
 	&__ticked {
@@ -43,14 +92,28 @@
 		align-items: center;
 	}
 
-	&__options li:not(.plans--selected) {
-		padding-left: 3.8rem;
-	}
-
 	&__hr {
 		background: $mirage-blue;
 		opacity: 0.25;
 		height: 0.1px;
 		margin: 2.4rem 0;
+		@include breakpoint(small) {
+			width: 90%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		@include breakpoint(xsmall) {
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	&--btn {
+		margin-left: 3rem;
+	}
+
+	&__cta {
+		padding-top: 0rem;
 	}
 }

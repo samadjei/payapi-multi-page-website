@@ -8,7 +8,6 @@
 @use 'component/buttons' as *;
 
 @use 'layout/footer' as *;
-@use 'layout/hero' as *;
 @use 'layout/navbar' as *;
 
 @use 'pages/homepage' as *;
@@ -35,6 +34,7 @@ body {
 	font-family: 'Public Sans', sans-serif;
 	font-size: 1.6rem;
 	background-color: #f2f2f2;
+	overflow-x: hidden;
 }
 
 ul {

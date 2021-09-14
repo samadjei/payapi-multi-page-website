@@ -30,7 +30,7 @@ class Nav extends Component {
 						<a className="navbar--items">Contact</a>
 					</Link>
 					<Link href="/">
-						<Button className="btn " buttonStyle="btn--primary" buttonSize="btn--desktop">
+						<Button className="btn " buttonStyle="btn--primary" buttonSize="btn--nav">
 							Schedule a demo
 						</Button>
 					</Link>

@@ -37,7 +37,7 @@ h2 {
 	line-height: 5.6rem;
 	letter-spacing: -0.369231px;
 	@include breakpoint(xsmall) {
-		font-size: 3.6rem;
+		font-size: 3.2rem;
 		line-height: 3.6rem;
 		letter-spacing: -0.28px;
 		padding-top: 3rem;
@@ -90,5 +90,19 @@ a {
 	&:focus {
 		cursor: pointer;
 		opacity: 1;
+	}
+}
+
+.plans--price {
+	font-family: 'DM Serif Display';
+	font-size: 5.6rem;
+	line-height: 7.2rem;
+	letter-spacing: -0.43px;
+	color: $san-juan-blue;
+	@include breakpoint(medium) {
+		font-size: 4.8rem;
+		line-height: 7.2rem;
+		text-align: center;
+		letter-spacing: -0.37;
 	}
 }
