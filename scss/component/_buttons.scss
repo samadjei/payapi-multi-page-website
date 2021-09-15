@@ -62,8 +62,9 @@
 	width: 17.1rem;
 	height: 4.8rem;
 	margin-left: auto;
-	@include breakpoint(small) {
+	@include breakpoint(xsmall) {
 		width: 16.8rem;
+		margin: 0 auto;
 	}
 }
 

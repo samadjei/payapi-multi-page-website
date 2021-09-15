@@ -33,6 +33,7 @@ const Plans = () => {
 							<li>Investments</li>
 							<li>Assets</li>
 							<li>Liabilities</li>
+							<li>Request Access</li>
 						</ul>
 						<hr className="plans__hr" />
 						<Link href="/">
@@ -123,7 +124,7 @@ const Plans = () => {
 						</Link>
 					</div>
 				</div>
-				<Subscription className='pricing__cta' />
+				<Subscription className="pricing__cta" />
 			</div>
 		</section>
 	);

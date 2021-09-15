@@ -7,7 +7,7 @@ const Hero = () => {
 			<div className="hero__inner container">
 				<div className="hero__left">
 					<h1 className="hero--title">Start building with our APIs for absolutely free.</h1>
-					<Basic />
+					<Basic className="hero__email" />
 					<p className="hero--question">
 						Have any questions? <span className="hero--contact">Contact Us</span>
 					</p>

@@ -25,13 +25,13 @@
 	&__logo {
 		margin-right: 6rem;
 		cursor: pointer;
-		@include breakpoint(small) {
+		@include breakpoint(xsmall) {
 			margin-right: auto;
 		}
 	}
 
 	&--items {
-		@include breakpoint(small) {
+		@include breakpoint(xsmall) {
 			color: $link-water-white;
 			font-weight: bold;
 			font-size: 2rem;
@@ -46,7 +46,7 @@
 		align-items: center;
 		width: 100%;
 		gap: 3.2rem;
-		@include breakpoint(small) {
+		@include breakpoint(xsmall) {
 			display: none;
 			text-align: center;
 			align-items: center;
@@ -78,7 +78,7 @@
 	right: 5rem;
 	cursor: pointer;
 	z-index: 999;
-	@include breakpoint(small) {
+	@include breakpoint(xsmall) {
 		display: block;
 	}
 

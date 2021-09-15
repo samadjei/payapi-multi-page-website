@@ -1,6 +1,6 @@
 const STYLES = ['btn--primary', 'btn--secondary', 'btn--tertiary'];
 
-const SIZES = ['btn--desktop', 'btn--tablet', 'btn--mobile', 'btn--nav'];
+const SIZES = ['btn--desktop', 'btn--tablet', 'btn--mobile'];
 
 export const Button = ({ children, type, onClick, buttonStyle, buttonSize }) => {
 	// checks to see if the value we have passed in is in the styles array
