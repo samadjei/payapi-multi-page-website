@@ -1,0 +1,129 @@
+@use '../abstracts/' as *;
+
+.contact {
+	// padding-top: 8.2rem;
+	&--title {
+		width: 63rem;
+		padding-bottom: 4.3rem;
+		@include breakpoint(small) {
+			width: 57rem;
+			margin: auto;
+		}
+		@include breakpoint(xsmall) {
+			width: 100%;
+			text-align: center;
+		}
+	}
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include breakpoint(small) {
+			flex-direction: column;
+			width: 100%;
+			margin: auto;
+		}
+	}
+
+	&__right {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__companies {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		justify-content: center;
+		align-items: center;
+		grid-row-gap: 4.7rem;
+		grid-column-gap: 6.2rem;
+		@include breakpoint(small) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	// Form styling
+	&__form {
+		display: flex;
+		flex-direction: column;
+		width: 44.5rem;
+		@include breakpoint(small) {
+			width: 100%;
+		}
+	}
+
+	&__item {
+		border: none;
+		border-bottom: 1px solid rgba(54, 83, 107, 0.5);
+		background: none;
+		height: 4.2rem;
+		margin-bottom: 2.4rem;
+
+		&::placeholder {
+			font-size: 15px;
+			line-height: 25px;
+			letter-spacing: -0.115385px;
+			padding-bottom: 1.7rem;
+			color: #36536b;
+			opacity: 0.5;
+			padding-bottom: 1.7rem;
+		}
+	}
+
+	&__checkbox {
+		width: 2.4rem;
+		height: 2.4rem;
+		background: rgba(54, 83, 107, 0.25);
+	}
+
+	&--accept {
+		font-size: 15px;
+		line-height: 25px;
+		letter-spacing: -0.115385px;
+		color: #36536b;
+		padding-bottom: 2.4rem;
+		@include breakpoint(xsmall) {
+			width: 27.7rem;
+		}
+	}
+
+	&__right {
+		padding-top: 6.4rem;
+	}
+
+	&--subhead {
+		@include breakpoint(small) {
+			text-align: center;
+			width: 44.5rem;
+		}
+		@include breakpoint(xsmall) {
+			text-align: center;
+			width: 100%;
+		}
+	}
+
+	&__companies {
+		padding-top: 4.7rem;
+		@include breakpoint(small) {
+			padding-top: 4rem;
+		}
+	}
+
+	&__checker {
+		display: flex;
+		gap: 2.6rem;
+	}
+}
+
+.error {
+	color: red;
+}
+
+.contact .subscription {
+	padding-top: 9.3rem;
+}
+
+.contact .btn--desktop {
+	margin: 0;
+}

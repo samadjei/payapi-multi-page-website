@@ -1,5 +1,7 @@
+import React from 'react';
 import { Formik, Form, Field, useField } from 'formik';
 import * as Yup from 'yup';
+import { Button } from '../../components/button';
 
 const CustomTextInput = ({ label, ...props }) => {
 	const [field, meta] = useField(props);
@@ -40,10 +42,9 @@ const ContactForm = () => {
 					acceptedTerms: false,
 				}}
 				validationSchema={Yup.object({
-					name: Yup.string().min(3, 'Must be at least 3 characters').max(15, 'Must be 15 characters or less').required('Required'),
-					email: Yup.string().email('Invalid email address').required('Required'),
-					acceptedTerms: Yup.boolean().required('Required'),
-					// .oneOf([true], 'You must accept the terms and conditions'),
+					name: Yup.string().min(3, 'Must be at least 3 characters').max(15, 'Must be 15 characters or less').required("This field can't be empty"),
+					email: Yup.string().email('Invalid email address').required("This field can't be empty"),
+					acceptedTerms: Yup.boolean().required('Required').oneOf([true], 'You must accept the terms and conditions'),
 				})}
 				onSubmit={(values, { setSubmitting, resetForm }) => {
 					setTimeout(() => {
@@ -53,17 +54,20 @@ const ContactForm = () => {
 					}, 3000);
 				}}
 			>
-				{(prop, isSubmitting) => (
-					<Form>
-						<CustomTextInput name="name" type="text" placeholder="Name" />
-						<CustomTextInput name="email" type="email" placeholder="Email Address" />
-						<CustomTextInput name="company" type="text" placeholder="Company Name" />
-						<CustomTextInput name="Title" type="text" placeholder="Title" />
-						<CustomTextInput name="Text" type="textarea" placeholder="Message" />
-						<CustomCheckbox name="acceptedTerms">Stay up-to-date with company announcements and updates to our API</CustomCheckbox>
-						<button className="hero__cta hero--primary cta--positioning" type="submit" disabled={isSubmitting}>
-							Schedule a Demo
-						</button>
+				{(props) => (
+					<Form className="contact__form">
+						<CustomTextInput className="contact__item" name="name" type="text" placeholder="Name" />
+						<CustomTextInput className="contact__item" name="email" type="email" placeholder="Email Address" />
+						<CustomTextInput className="contact__item" name="company" type="text" placeholder="Company Name" />
+						<CustomTextInput className="contact__item" name="Title" type="text" placeholder="Title" />
+						<CustomTextInput className="contact__item" name="Text" type="textarea" placeholder="Message" />
+						<div className="contact__checker">
+							<CustomCheckbox className="contact__checkbox" name="acceptedTerms"></CustomCheckbox>
+							<p className="contact--accept">Stay up-to-date with company announcements and updates to our API</p>
+						</div>
+						<Button className="btn hero--btn" buttonStyle="btn--tertiary" buttonSize="btn--desktop">
+							{props.isSubmitting ? 'Loading...' : 'Submit'}
+						</Button>
 					</Form>
 				)}
 			</Formik>

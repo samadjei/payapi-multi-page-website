@@ -5,7 +5,7 @@ const AboutHero = () => {
 		<section className="about">
 			<div className="about__pad container">
 				<div className="about__header">
-					<h1 className="small">We empower innovators by delivering access to the financial system</h1>
+					<h2 className="about--title">We empower innovators by delivering access to the financial system</h2>
 				</div>
 				<div className="about__values">
 					<div className="about__option">
