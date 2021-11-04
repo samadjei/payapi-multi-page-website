@@ -2,10 +2,12 @@ import Link from 'next/link';
 import { Button } from '../../components/button';
 import Subscription from '../homepage/subscription';
 import Ticked from '../ticked';
+import Image from 'next/image';
 
 const Plans = () => {
 	return (
 		<section className="plans">
+			
 			<div className="container">
 				<div className="plans__title">
 					<h2>Pricing</h2>

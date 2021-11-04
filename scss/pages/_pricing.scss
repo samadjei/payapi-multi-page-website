@@ -1,21 +1,33 @@
 @use '../abstracts/' as *;
 
+.bg-pattern-2 {
+	position: absolute;
+	top: -70rem;
+	right: 10rem;
+	z-index: -1;
+	@include breakpoint(small) {
+		right: -45rem;
+	}
+	@include breakpoint(xsmall) {
+		right: -50rem;
+	}
+}
+
 .pricing {
 	position: relative;
 
-	&::after {
-		content: '';
-		position: absolute;
-		background-image: url('../../public/assets/shared/desktop/bg-pattern-circle.svg');
-		height: 78rem;
-		width: 78rem;
-		top: -70rem;
-		right: 10rem;
-		z-index: -1;
-		@include breakpoint(xsmall) {
-			right: -45rem;
-		}
-	}
+	// &::after {
+	// 	content: '';
+	// 	background-image: url('../../public/assets/shared/desktop/bg-pattern-circle.svg');
+	// 	height: 78rem;
+	// 	width: 78rem;
+	// 	top: -70rem;
+	// 	right: 10rem;
+	// 	z-index: -1;
+	// 	@include breakpoint(xsmall) {
+	// 		right: -45rem;
+	// 	}
+	// }
 }
 
 .plans {
