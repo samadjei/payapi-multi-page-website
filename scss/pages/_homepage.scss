@@ -1,27 +1,22 @@
 @use '../abstracts/' as *;
 
+.bg-pattern {
+	position: absolute;
+	top: -30rem;
+	right: 10rem;
+	@include breakpoint(medium) {
+		top: -50rem;
+		right: 0rem;
+	}
+	@include breakpoint(xsmall) {
+		top: -25rem;
+		right: 0;
+		left: 0;
+	}
+}
+
 .main {
 	position: relative;
-
-	&::after {
-		content: '';
-		position: absolute;
-		background-image: url('../../public/assets/shared/desktop/bg-pattern-circle.svg');
-		background-repeat: no-repeat;
-		height: 78rem;
-		width: 78rem;
-		top: -30rem;
-		right: 10rem;
-		z-index: -1;
-		@include breakpoint(medium) {
-			top: -50rem;
-			right: 0rem;
-		}
-		@include breakpoint(xsmall) {
-			top: -55rem;
-			right: -20rem;
-		}
-	}
 }
 
 .hero {
